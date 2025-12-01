@@ -1,0 +1,68 @@
+---
+---
+
+<header class="sticky top-0 z-50 bg-[#FAF7F2] border-b border-border/30">
+  <div class="max-w-container mx-auto px-6 py-4"> 
+    <button 
+      id="menu-btn"
+      class="w-12 h-12 flex flex-col justify-center items-center gap-1.5 relative md:hidden"
+      aria-label="Toggle menu"
+    >
+      <span class="hamburger-line w-6 h-0.5 bg-black transition-all duration-300"></span>
+      <span class="hamburger-line w-6 h-0.5 bg-black transition-all duration-300"></span>
+      <span class="hamburger-line w-6 h-0.5 bg-black transition-all duration-300"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu (Hidden by default) -->
+  <nav id="mobile-menu" class="overflow-hidden max-h-0 bg-beige border-t border-border/30 md:block">
+    <ul class="px-6 py-4 space-y-4">
+      <li><a href="/" class="block text-text-heading hover:text-blue-primary transition-colors">Inicio</a></li>
+      <li><a href="#servicios" class="block text-text-heading hover:text-blue-primary transition-colors">Servicios</a></li>
+      <li><a href="#nosotros" class="block text-text-heading hover:text-blue-primary transition-colors">Nosotros</a></li>
+      <li><a href="#contacto" class="block text-text-heading hover:text-blue-primary transition-colors">Contacto</a></li>
+      <li>
+        <a href="#cotizar" class="block bg-blue-primary text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-dark transition-colors">
+          Cotizar
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+<style>
+  /* Hamburger animation when open */
+  #menu-btn.open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  
+  #menu-btn.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #menu-btn.open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+</style>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('open');
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+</script>

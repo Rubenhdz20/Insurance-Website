@@ -1,0 +1,48 @@
+---
+const whatsappNumber = "521234567890"; // Replace with actual number
+const whatsappMessage = "Hola, me interesa obtener información sobre seguros";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+---
+
+<section class="bg-beige px-6 py-12">
+  <div class="max-w-container mx-auto text-center">
+    
+    <!-- Logo -->
+    <div class="mb-8">
+      <img src="../src/assets/logo.png" alt="Logo Coco Mendoza Seguros" class="h-8 max-w-28"/>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="font-heading font-bold text-[32px] leading-tight text-text-heading mb-6">
+      Tu Futuro, Asegurado con Coco Mendoza Seguros
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="text-base text-text-body leading-relaxed mb-8 max-w-md mx-auto">
+      Seguros personalizados para tu hogar, auto, salud y retiro. Respaldados por Allianz.
+    </p>
+
+    <!-- WhatsApp CTA Button -->
+    <a 
+      href={whatsappLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block w-full bg-whatsapp text-white font-semibold py-4 px-6 rounded-lg shadow-md hover:bg-[#20BA5A] transition-colors"
+    >
+      WhatsApp
+    </a>
+
+    <!-- Trust Badge -->
+    <div class="mt-12 pt-8 border-t border-border/30">
+      <div class="flex flex-col items-center gap-2">
+        <div class="text-blue-primary font-bold text-lg">
+          Allianz ®
+        </div>
+        <div class="text-sm text-text-light">
+          Asesor Certificado
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
