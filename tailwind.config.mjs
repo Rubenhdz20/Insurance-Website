@@ -6,7 +6,7 @@ export default {
       colors: {
         // Backgrounds
         beige: {
-          DEFAULT: '#FAF7F2',
+          default: '#FAF7F2',
           dark: '#F5F0E8',
         },
         

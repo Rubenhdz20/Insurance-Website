@@ -1,0 +1,103 @@
+---
+const services = [
+  {
+    id: 'retiro',
+    title: 'Plan de Ahorro para el Retiro',
+    description: 'Planifica tu futuro financiero desde ahora. Asegura una jubilación tranquila y sin preocupaciones, con opciones flexibles y adaptadas a tus necesidades.',
+    image: 'src/assets/retiroplansmall.jpg',
+    icon: '💰',
+    link: '/plan-retiro'
+  },
+  {
+    id: 'auto',
+    title: 'Seguro de Auto',
+    description: 'Conduce con confianza sabiendo que estás protegido. Cubrimos desde accidentes menores hasta siniestros totales, garantizando tu seguridad y la de tu vehículo.',
+    image: 'src/assets/autosmall.jpg',
+    icon: '🚗',
+    link: '/seguro-auto'
+  },
+  {
+    id: 'medicos',
+    title: 'Gastos Médicos',
+    description: 'Cuida tu salud y la de tu familia. Accede a una amplia red de hospitales y médicos, con cobertura para consultas, estudios y tratamientos.',
+    image: 'src/assets/medicosmall.jpg',
+    icon: '🏥',
+    link: '/gastos-medicos'
+  },
+  {
+    id: 'hogar',
+    title: 'Seguro de Hogar',
+    description: 'Protege tu hogar con nuestra cobertura integral. Desde daños estructurales hasta robos, te ofrecemos la tranquilidad que necesitas. Asegura tu patrimonio y vive sin preocupaciones.',
+    image: 'src/assets/segurocasasmall.jpg',
+    icon: '🏠',
+    link: '/seguro-hogar'
+  },
+  {
+    id: 'educativo',
+    title: 'Seguro Educativo',
+    description: 'Es un plan que combina protección y ahorro para garantizar que tus hijos puedan estudiar, sin importar lo que pase.',
+    image: 'src/assets/educacionsmall.jpg',
+    icon: '🎓',
+    link: '/seguro-educativo'
+  }
+];
+---
+
+<section id="servicios" class="bg-white py-16 px-6">
+  <div class="max-w-container mx-auto">
+    
+    <!-- Section Title -->
+    <h2 class="font-heading font-bold text-3xl md:text-4xl text-text-heading text-center mb-12">
+      Conoce todas nuestras opciones
+    </h2>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      {services.map((service) => (
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          
+          <!-- Service Image -->
+          <div class="relative h-48 bg-gray-200">
+            <img 
+              src={service.image} 
+              alt={service.title}
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Service Content -->
+          <div class="p-6">
+            
+            <!-- Icon + Title -->
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center text-2xl flex-shrink-0">
+                {service.icon}
+              </div>
+              <h3 class="font-heading font-bold text-xl text-text-heading">
+                {service.title}
+              </h3>
+            </div>
+
+            <!-- Description -->
+            <p class="text-text-body text-sm leading-relaxed mb-6">
+              {service.description}
+            </p>
+
+            <!-- CTA Button -->
+            <a 
+              href={service.link}
+              class="block w-full bg-blue-primary text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-dark transition-colors cursor-pointer"
+            >
+              Conoce más
+            </a>
+
+          </div>
+
+        </article>
+      ))}
+
+    </div>
+
+  </div>
+</section>

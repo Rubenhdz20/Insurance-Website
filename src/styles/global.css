@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+    /* Backgrounds */
+    --color-beige-default: #FAF7F2;
+    --color-beige-dark: #F5F0E8;
+    
+    /* Brand colors */
+    --color-blue-primary: #2B7EC1;
+    --color-blue-dark: #003E7A;
+    --color-blue-light: #E3F2FD;
+    
+    /* Text colors */
+    --color-text-heading: #1A1A1A;
+    --color-text-body: #4A4A4A;
+    --color-text-light: #666666;
+    
+    /* Accents */
+    --color-whatsapp: #25D366;
+    --color-border: #E5E5E5;
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+}
