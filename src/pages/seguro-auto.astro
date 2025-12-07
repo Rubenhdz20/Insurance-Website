@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const whatsappNumber = "5214441234567";
+const whatsappMessage = "Hola, me interesa información sobre el Seguro de Auto";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const reasons = [
+  {
+    icon: '⚖️',
+    iconBg: 'bg-blue-100',
+    title: 'Es obligatorio por ley',
+    description: 'En muchas carreteras federales y ciudades, es un requisito legal tener al menos un seguro de responsabilidad civil.'
+  },
+  {
+    icon: '💰',
+    iconBg: 'bg-red-100',
+    title: 'Un accidente puede costarte una fortuna',
+    description: 'Los costos de reparación y médicos pueden ser enormes. Un seguro protege tu patrimonio.'
+  },
+  {
+    icon: '🔒',
+    iconBg: 'bg-purple-100',
+    title: 'Protección ante robo',
+    description: 'Recupera el valor de tu vehículo en caso de robo total, brindándote seguridad financiera.'
+  },
+  {
+    icon: '😊',
+    iconBg: 'bg-green-100',
+    title: 'Conduce sin preocupaciones',
+    description: 'Saber que estás respaldado te da la tranquilidad que necesitas en cada viaje'
+  }
+];
+
+const steps = [
+  {
+    number: 1,
+    title: 'Cotiza gratis',
+    description: 'Contáctanos para obtener una cotización personalizada sin compromiso.'
+  },
+  {
+    number: 2,
+    title: 'Compara opciones',
+    description: 'Te presentamos las mejores opciones de múltiples aseguradoras.'
+  },
+  {
+    number: 3,
+    title: 'Proporciona información básica',
+    description: 'Necesitaremos datos de tu vehículo y del conductor principal.'
+  },
+  {
+    number: 4,
+    title: 'Firma y paga',
+    description: 'Completa el proceso de forma segura y sencilla, con opciones de pago flexibles.'
+  },
+  {
+    number: 5,
+    title: '¡Estás protegido!',
+    description: 'Recibe tu póliza digital y comienza a conducir con total tranquilidad.'
+  }
+];
+
+const relatedServices = [
+  {
+    icon: '🏠',
+    title: 'Seguro de Hogar',
+    description: 'Protege tu patrimonio más valioso.',
+    link: '/seguro-hogar'
+  },
+  {
+    icon: '🏥',
+    title: 'Gastos Médicos',
+    description: 'Tu salud y la de tu familia es primero.',
+    link: '/gastos-medicos'
+  },
+  {
+    icon: '🐷',
+    title: 'Plan de Retiro',
+    description: 'Asegura un futuro tranquilo.',
+    link: '/plan-retiro'
+  }
+];
+---
+
+<Layout title="Seguro de Auto - Mendoza Coco Seguros">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="bg-beige-default pt-8 pb-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <!-- Back Button -->
+      <a href="/" class="inline-flex items-center gap-2 text-blue-primary font-medium mb-6 hover:underline">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Volver
+      </a>
+
+      <!-- Icon -->
+      <div class="w-16 h-16 rounded-2xl bg-blue-light flex items-center justify-center text-3xl mb-6 mx-auto">
+        🚗
+      </div>
+
+      <!-- Title -->
+      <h1 class="font-heading font-bold text-3xl text-text-heading text-center mb-4">
+        Seguro de Autos
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg font-semibold text-text-heading text-center mb-6">
+        Conduce con confianza y tranquilidad
+      </p>
+
+      <!-- Description -->
+      <p class="text-text-body leading-relaxed text-center">
+        Esta protección financiera y legal que te respalda ante accidentes, robos o daños a tu vehículo o 
+        terceros. Conduce con confianza sabiendo que estás protegido ante cualquier imprevisto en el camino.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Why You Need Section -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-12">
+        ¿Por qué necesitas un Seguro de Auto?
+      </h2>
+
+      <div class="space-y-8">
+        {reasons.map((reason) => (
+          <div class="flex gap-4 items-start">
+            <div class={`w-14 h-14 rounded-full ${reason.iconBg} flex items-center justify-center text-2xl shrink-0`}>
+              {reason.icon}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-text-heading mb-2">{reason.title}</h3>
+              <p class="text-sm text-text-body leading-relaxed">{reason.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How to Contract Section -->
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-3">
+        ¿Cómo contratar tu seguro?
+      </h2>
+
+      <p class="text-center text-text-body mb-10">En 5 pasos sencillos.</p>
+
+      <div class="space-y-6">
+        {steps.map((step) => (
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold shrink-0">
+              {step.number}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-text-heading mb-1">{step.title}</h3>
+              <p class="text-sm text-text-body">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-primary py-12 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      
+      <h2 class="font-heading font-bold text-2xl text-white mb-4">
+        ¿Listo para proteger tu auto?
+      </h2>
+
+      <p class="text-white/90 mb-8 leading-relaxed">
+        Cotiza gratis en minutos. Comparamos precios de múltiples aseguradoras para ti.
+      </p>
+
+      <div class="space-y-3">
+        <a 
+          href="#cotizar"
+          class="block w-full bg-white text-blue-primary font-semibold py-4 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+        >
+          Cotizar ahora
+        </a>
+        
+        <a 
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full bg-whatsapp text-white font-semibold py-4 px-6 rounded-lg hover:bg-[#20BA5A] transition-colors"
+        >
+          Contactar por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl text-text-heading mb-8">
+        También te puede interesar
+      </h2>
+
+      <div class="space-y-3">
+        {relatedServices.map((service) => (
+          <a 
+            href={service.link}
+            class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
+          >
+            <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center text-2xl shrink-0">
+              {service.icon}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-text-heading">{service.title}</h3>
+              <p class="text-sm text-text-body">{service.description}</p>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

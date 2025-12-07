@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const whatsappNumber = "5214441234567";
+const whatsappMessage = "Hola, me interesa información sobre el Plan de Ahorro para el Retiro";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const includes = [
+  {
+    title: 'Crecimiento con rendimientos competitivos',
+    description: 'Tu dinero trabaja para ti, generando ganancias a lo largo del tiempo.'
+  },
+  {
+    title: 'Beneficios fiscales',
+    description: 'Aprovecha las deducciones de impuestos para maximizar tu ahorro'
+  },
+  {
+    title: 'Protección de tu patrimonio',
+    description: 'Tu ahorro está seguro y protegido ante eventualidades.'
+  },
+  {
+    title: 'Interés compuesto',
+    description: 'El "efecto bola de nieve" que acelera el crecimiento de tu dinero.'
+  },
+  {
+    title: 'Aportaciones flexibles',
+    description: 'Ahorra a tu ritmo, ajustando tus aportaciones según tus posibilidades'
+  }
+];
+
+const reasons = [
+  {
+    icon: '💰',
+    iconBg: 'bg-pink-100',
+    title: 'Las pensiones públicas son insuficientes',
+    description: 'Asegura tu calidad de vida y no dependas únicamente del sistema público.'
+  },
+  {
+    icon: '💵',
+    iconBg: 'bg-green-100',
+    title: 'Entre más joven comiences, más acumulas',
+    description: 'El poder del interés compuesto trabaja a tu favor con el tiempo.'
+  },
+  {
+    icon: '🛠️',
+    iconBg: 'bg-blue-100',
+    title: 'Define tu propio estilo de vida en el retiro',
+    description: 'Viajar, disfrutar de tus hobbies, pasar tiempo con tu familia. Tú decides.'
+  },
+  {
+    icon: '❤️',
+    iconBg: 'bg-red-100',
+    title: 'Deja un legado a tu familia',
+    description: 'Protege a tus seres queridos y asegura su futuro financiero.'
+  }
+];
+
+const steps = [
+  {
+    number: 1,
+    title: 'Agenda asesoría',
+    description: 'Sin compromiso, resolvemos todas tus dudas.'
+  },
+  {
+    number: 2,
+    title: 'Diseñamos tu estrategia',
+    description: 'Juntos creamos un plan para crear un futuro a tu medida.'
+  },
+  {
+    number: 3,
+    title: 'Eliges el plan',
+    description: 'Te presentamos las mejores opciones'
+  },
+  {
+    number: 4,
+    title: 'Abres tu cuenta',
+    description: 'Realizas tu primera aportación de forma sencilla.'
+  },
+  {
+    number: 5,
+    title: '¡Listo! Comienza a crecer',
+    description: 'Programa aportaciones automáticas y sigue tu progreso.'
+  }
+];
+
+const relatedServices = [
+  {
+    icon: '🏠',
+    title: 'Seguro de Hogar',
+    description: 'Protege tu patrimonio más valioso.',
+    link: '/seguro-hogar'
+  },
+  {
+    icon: '🏥',
+    title: 'Gastos Médicos',
+    description: 'Tu salud y la de tu familia es primero.',
+    link: '/gastos-medicos'
+  },
+  {
+    icon: '🚗',
+    title: 'Seguro de Auto',
+    description: 'Conduce con tranquilidad.',
+    link: '/seguro-auto'
+  }
+];
+---
+
+<Layout title="Plan de Ahorro para el Retiro - Mendoza Coco Seguros">
+  <Header />
+  <!-- Hero Section -->
+  <section class="bg-beige-default pt-8 pb-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <!-- Back Button -->
+      <a href="/" class="inline-flex items-center gap-2 text-blue-primary font-medium mb-6 hover:underline">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Volver
+      </a>
+
+      <!-- Icon -->
+      <div class="w-16 h-16 rounded-2xl bg-blue-light flex items-center justify-center text-3xl mb-6 mx-auto">
+        🐷
+      </div>
+
+      <!-- Title -->
+      <h1 class="font-heading font-bold text-3xl text-text-heading text-center mb-4">
+        Plan de Ahorro para el Retiro
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg font-semibold text-text-heading text-center mb-6">
+        Construye el futuro que mereces
+      </p>
+
+      <!-- Description -->
+      <p class="text-text-body leading-relaxed text-center">
+        Es una estrategia financiera diseñada para que tú decidas cómo quieres vivir tu retiro. 
+        Tu dinero crece con beneficios fiscales y rendimientos. Planifica hoy para disfrutar mañana 
+        de estabilidad financiera, libertad y calidad de vida que deseas en tu futuro.
+      </p>
+
+    </div>
+  </section>
+  <!-- What Includes Section -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-8">
+        ¿Qué incluye un Plan de Ahorro para el Retiro?
+      </h2>
+
+      <p class="text-center text-text-heading font-semibold mb-8">
+        Más que un ahorro, es tu estrategia de libertad financiera.
+      </p>
+
+      <div class="space-y-6">
+        {includes.map((item) => (
+          <div class="flex gap-4 items-start">
+            <div class="shrink-0 mt-1">
+              <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-text-heading mb-1">{item.title}</h3>
+              <p class="text-sm text-text-body">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+  <!-- Why You Need Section -->
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-12">
+        ¿Por qué necesitas un Plan de Ahorro para el Retiro?
+      </h2>
+
+      <div class="space-y-8">
+        {reasons.map((reason) => (
+          <div class="text-center">
+            <div class={`w-16 h-16 rounded-full ${reason.iconBg} flex items-center justify-center text-3xl mx-auto mb-4`}>
+              {reason.icon}
+            </div>
+            <h3 class="font-semibold text-text-heading mb-2">{reason.title}</h3>
+            <p class="text-sm text-text-body">{reason.description}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+  <!-- How to Start Section -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-3">
+        ¿Cómo empezar tu plan de retiro?
+      </h2>
+
+      <p class="text-center text-text-body mb-10">En 5 pasos sencillos.</p>
+
+      <div class="space-y-6 mb-12">
+        {steps.map((step) => (
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold shrink-0">
+              {step.number}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-text-heading mb-1">{step.title}</h3>
+              <p class="text-sm text-text-body">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="bg-blue-primary py-12 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      
+      <h2 class="font-heading font-bold text-2xl text-white mb-4">
+        Tu futuro comienza con una decisión hoy
+      </h2>
+
+      <p class="text-white/90 mb-8 leading-relaxed">
+        Agenda tu asesoría gratuita. Sin compromiso. Descubre cuánto podrías tener al retirarte.
+      </p>
+
+      <div class="space-y-3">
+        <a 
+          href="#cotizar"
+          class="block w-full bg-white text-blue-primary font-semibold py-4 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+        >
+          Agendar mi asesoría
+        </a>
+        
+        <a 
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full bg-whatsapp text-white font-semibold py-4 px-6 rounded-lg hover:bg-[#20BA5A] transition-colors"
+        >
+          Contactar por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- Related Services -->
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl text-text-heading mb-8">
+        También te puede interesar
+      </h2>
+
+      <div class="space-y-3">
+        {relatedServices.map((service) => (
+          <a 
+            href={service.link}
+            class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
+          >
+            <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center text-2xl shrink-0">
+              {service.icon}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-text-heading">{service.title}</h3>
+              <p class="text-sm text-text-body">{service.description}</p>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

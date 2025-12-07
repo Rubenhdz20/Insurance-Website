@@ -1,0 +1,99 @@
+---
+const benefits = [
+  {
+    icon: '📁',
+    title: 'Más de 10 años de experiencia',
+    description: 'Nuestra trayectoria nos permite ofrecerte soluciones probadas'
+  },
+  {
+    icon: '🎓',
+    title: 'Asesores Matriculados',
+    description: 'Contamos con las credenciales que garantizan un servicio profesional'
+  },
+  {
+    icon: '❤️',
+    title: 'Enfoque en las necesidades',
+    description: 'Tu tranquilidad es nuestra prioridad. Escuchamos para entenderte'
+  },
+  {
+    icon: '🤝',
+    title: 'Alianzas con los mejores',
+    description: 'Trabajamos con líderes del mercado para ofrecerte la mejor cobertura'
+  }
+];
+
+const differentiators = [
+  {
+    title: 'Asesoría Personalizada',
+    description: 'Analizamos tu situación para ofrecerte un plan a tu medida, sin soluciones genéricas.'
+  },
+  {
+    title: 'Acompañamiento',
+    description: 'Estamos contigo no solo al contratar, sino también en el momento de un siniestro y en la gestión de tu póliza.'
+  },
+  {
+    title: 'Compromiso y Honestidad',
+    description: 'Nuestros principios éticos son la base de cada recomendación. Buscamos relaciones a largo plazo.'
+  }
+];
+---
+
+<section class="bg-blue-primary py-16 px-6">
+  <div class="max-w-container mx-auto">
+    <!-- PART 1: Por qué elegir a Coco Mendoza Seguros -->
+    <div class="mb-16">
+      <!-- Section Title -->
+      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-4">
+        Por qué elegir a Coco Mendoza Seguros?
+      </h2>
+      <!-- Intro Text -->
+      <p class="text-white/90 text-center max-w-2xl mx-auto mb-10 leading-relaxed">
+        Entendemos que elegir un seguro es una decisión importante. Por eso, nos 
+        dedicamos a ofrecerte la mejor asesoría.
+      </p>
+      <!-- Benefits Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+        {benefits.map((benefit) => (
+          <article class="bg-white rounded-xl p-6 flex gap-4 items-center shadow-sm cursor-pointer">
+            <!-- Icon -->
+            <div class="w-10 h-10 rounded-full bg-blue-light flex items-center justify-center text-2xl shrink-0">
+              {benefit.icon}
+            </div>
+            <!-- Content -->
+            <div class="flex-1">
+              <h3 class="font-heading font-bold text-lg text-text-heading mb-2">
+                {benefit.title}
+              </h3>
+              <p class="text-text-body text-sm leading-relaxed">
+                {benefit.description}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+      <!-- Closing Text -->
+      <p class="text-white text-center font-semibold text-lg md:text-xl">
+        Somos más que asesores, somos tus aliados de confianza en cada paso
+      </p>
+    </div>
+    <div>
+      <!-- Section Title -->
+      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-10">
+        Lo que nos diferencia
+      </h2>
+      <!-- Differentiators Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {differentiators.map((item) => (
+          <article class="bg-white rounded-xl p-8 text-center shadow-sm">
+            <h3 class="font-heading font-bold text-xl text-text-heading mb-4">
+              {item.title}
+            </h3>
+            <p class="text-text-body text-sm leading-relaxed">
+              {item.description}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

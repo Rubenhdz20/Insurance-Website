@@ -45,18 +45,14 @@ const services = [
 
 <section id="servicios" class="bg-white py-16 px-6">
   <div class="max-w-container mx-auto">
-    
     <!-- Section Title -->
     <h2 class="font-heading font-bold text-3xl md:text-4xl text-text-heading text-center mb-12">
       Conoce todas nuestras opciones
     </h2>
-
     <!-- Services Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      
       {services.map((service) => (
         <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          
           <!-- Service Image -->
           <div class="relative h-48 bg-gray-200">
             <img 
@@ -65,39 +61,28 @@ const services = [
               class="w-full h-full object-cover"
             />
           </div>
-
-          <!-- Service Content -->
           <div class="p-6">
-            
             <!-- Icon + Title -->
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center text-2xl flex-shrink-0">
+            <div class="flex items-center justify-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center text-2xl shrink-0">
                 {service.icon}
               </div>
-              <h3 class="font-heading font-bold text-xl text-text-heading">
+              <h3 class="font-heading font-bold text-xl text-text-heading text-center">
                 {service.title}
               </h3>
             </div>
-
-            <!-- Description -->
             <p class="text-text-body text-sm leading-relaxed mb-6">
               {service.description}
             </p>
-
-            <!-- CTA Button -->
             <a 
               href={service.link}
               class="block w-full bg-blue-primary text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-dark transition-colors cursor-pointer"
             >
               Conoce más
             </a>
-
           </div>
-
         </article>
       ))}
-
     </div>
-
   </div>
 </section>
