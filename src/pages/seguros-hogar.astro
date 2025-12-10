@@ -4,70 +4,113 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const whatsappNumber = "+5216691178152";
-const whatsappMessage = "Hola, me interesa información sobre el Seguro de Auto";
+const whatsappMessage = "Hola, me interesa información sobre el Seguro de Hogar";
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const coverage = [
+  {
+    icon: '🔥',
+    iconColor: 'text-orange-500',
+    title: 'Incendios y explosiones'
+  },
+  {
+    icon: '💧',
+    iconColor: 'text-blue-500',
+    title: 'Daños por agua'
+  },
+  {
+    icon: '🦹',
+    iconColor: 'text-purple-500',
+    title: 'Robo y vandalismo'
+  },
+  {
+    icon: '🌪️',
+    iconColor: 'text-gray-500',
+    title: 'Fenómenos naturales'
+  },
+  {
+    icon: '🏚️',
+    iconColor: 'text-blue-600',
+    title: 'Daños estructurales'
+  },
+  {
+    icon: '🛋️',
+    iconColor: 'text-indigo-500',
+    title: 'Bienes personales'
+  },
+  {
+    icon: '⚖️',
+    iconColor: 'text-cyan-500',
+    title: 'Responsabilidad civil'
+  },
+  {
+    icon: '🏨',
+    iconColor: 'text-blue-400',
+    title: 'Alojamiento temporal'
+  }
+];
 
 const reasons = [
   {
-    icon: '⚖️',
-    iconBg: 'bg-blue-100',
-    title: 'Es obligatorio por ley',
-    description: 'En muchas carreteras federales y ciudades, es un requisito legal tener al menos un seguro de responsabilidad civil.'
-  },
-  {
-    icon: '💰',
-    iconBg: 'bg-red-100',
-    title: 'Un accidente puede costarte una fortuna',
-    description: 'Los costos de reparación y médicos pueden ser enormes. Un seguro protege tu patrimonio.'
-  },
-  {
-    icon: '🔒',
-    iconBg: 'bg-purple-100',
-    title: 'Protección ante robo',
-    description: 'Recupera el valor de tu vehículo en caso de robo total, brindándote seguridad financiera.'
-  },
-  {
     icon: '😊',
+    iconBg: 'bg-blue-100',
+    title: 'Tranquilidad para ti y tu familia',
+    description: 'Vive con la certeza de que, pase lo que pase, tu familia y tu espacio estarán protegidos.'
+  },
+  {
+    icon: '💸',
+    iconBg: 'bg-red-100',
+    title: 'Evita gastos catastróficos inesperados',
+    description: 'Una reparación mayor puede costar miles. El seguro te protege de deudas imprevistas.'
+  },
+  {
+    icon: '🛡️',
     iconBg: 'bg-green-100',
-    title: 'Conduce sin preocupaciones',
-    description: 'Saber que estás respaldado te da la tranquilidad que necesitas en cada viaje'
+    title: 'Tu casa es tu patrimonio más valioso',
+    description: 'Asegurar tu hogar es la mejor forma de proteger la inversión más importante de tu vida.'
+  },
+  {
+    icon: '🏦',
+    iconBg: 'bg-purple-100',
+    title: 'Requisito para hipotecas y créditos',
+    description: 'Muchos bancos lo solicitan como condición para otorgar un crédito hipotecario.'
   }
 ];
 
 const steps = [
   {
     number: 1,
-    title: 'Cotiza gratis',
-    description: 'Contáctanos para obtener una cotización personalizada sin compromiso.'
+    title: 'Contáctanos',
+    description: 'Cuéntanos sobre tu hogar y lo que quieres proteger. Es rápido y sin compromiso.'
   },
   {
     number: 2,
-    title: 'Compara opciones',
-    description: 'Te presentamos las mejores opciones de múltiples aseguradoras.'
+    title: 'Evaluamos tus necesidades',
+    description: 'Analizamos los detalles para encontrar la cobertura perfecta para ti.'
   },
   {
     number: 3,
-    title: 'Proporciona información básica',
-    description: 'Necesitaremos datos de tu vehículo y del conductor principal.'
+    title: 'Te presentamos opciones',
+    description: 'Recibirás cotizaciones claras y fáciles de entender, con las mejores aseguradoras.'
   },
   {
     number: 4,
-    title: 'Firma y paga',
-    description: 'Completa el proceso de forma segura y sencilla, con opciones de pago flexibles.'
+    title: 'Contratas y quedas protegido',
+    description: 'Una vez que eliges, te ayudamos con el proceso y tu hogar queda asegurado al instante.'
   },
   {
     number: 5,
-    title: '¡Estás protegido!',
-    description: 'Recibe tu póliza digital y comienza a conducir con total tranquilidad.'
+    title: 'Acompañamiento continuo',
+    description: 'Estamos contigo siempre, para resolver dudas o ayudarte en caso de un siniestro.'
   }
 ];
 
 const relatedServices = [
   {
-    icon: '🏠',
-    title: 'Seguro de Hogar',
-    description: 'Protege tu patrimonio más valioso.',
-    link: '/seguro-hogar'
+    icon: '🚗',
+    title: 'Seguro de Auto',
+    description: 'Conduce con tranquilidad.',
+    link: '/seguro-auto'
   },
   {
     icon: '🏥',
@@ -84,7 +127,7 @@ const relatedServices = [
 ];
 ---
 
-<Layout title="Seguro de Auto - Mendoza Coco Seguros">
+<Layout title="Seguro de Hogar - Mendoza Coco Seguros">
   <Header />
   <section class="bg-beige-default pt-8 pb-12 px-6">
     <div class="max-w-2xl mx-auto">
@@ -95,17 +138,18 @@ const relatedServices = [
         Volver
       </a>
       <div class="w-16 h-16 rounded-2xl bg-blue-light flex items-center justify-center text-3xl mb-6 mx-auto">
-        🚗
+        🏠
       </div>
       <h1 class="font-heading font-bold text-3xl text-text-heading text-center mb-4">
-        Seguro de Autos
+        Seguro de Hogar
       </h1>
       <p class="text-lg font-semibold text-text-heading text-center mb-6">
-        Conduce con confianza y tranquilidad
+        Protege tu casa, tus bienes y tu bienestar
       </p>
       <p class="text-text-body leading-relaxed text-center">
-        Esta protección financiera y legal que te respalda ante accidentes, robos o daños a tu vehículo o 
-        terceros. Conduce con confianza sabiendo que estás protegido ante cualquier imprevisto en el camino.
+        Esta protección cuida tu casa, tus bienes y tu tranquilidad frente a imprevistos como incendios, 
+        robos, fugas de agua o desastres naturales. Vive sin preocupaciones sabiendo que tu patrimonio 
+        más valioso está protegido.
       </p>
     </div>
   </section>
@@ -113,7 +157,27 @@ const relatedServices = [
   <section class="bg-white py-12 px-6">
     <div class="max-w-2xl mx-auto">
       <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-12">
-        ¿Por qué necesitas un Seguro de Auto?
+        ¿Qué cubre el Seguro de Hogar?
+      </h2>
+      <div class="grid grid-cols-2 gap-4">
+        {coverage.map((item) => (
+          <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition-shadow cursor-pointer">
+            <div class={`text-4xl mb-3 ${item.iconColor}`}>
+              {item.icon}
+            </div>
+            <h3 class="font-semibold text-text-heading text-sm">
+              {item.title}
+            </h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-12">
+        ¿Por qué necesitas un Seguro de Hogar?
       </h2>
       <div class="space-y-8">
         {reasons.map((reason) => (
@@ -131,16 +195,16 @@ const relatedServices = [
     </div>
   </section>
 
-  <section class="bg-gray-50 py-12 px-6">
+  <section class="bg-white py-12 px-6">
     <div class="max-w-2xl mx-auto">
       <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-3">
-        ¿Cómo contratar tu seguro?
+        ¿Cómo funciona?
       </h2>
-      <p class="text-center text-text-body mb-10">En 5 pasos sencillos.</p>
+      <p class="text-center text-text-body mb-10">Es más fácil de lo que piensas</p>
       <div class="space-y-6">
         {steps.map((step) => (
           <div class="flex gap-4 items-start">
-            <div class="w-10 h-10 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold shrink-0">
+            <div class="w-12 h-12 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold text-xl shrink-0">
               {step.number}
             </div>
             <div class="flex-1">
@@ -156,10 +220,10 @@ const relatedServices = [
   <section class="bg-blue-primary py-12 px-6">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="font-heading font-bold text-2xl text-white mb-4">
-        ¿Listo para proteger tu auto?
+        ¿Listo para proteger tu hogar?
       </h2>
       <p class="text-white/90 mb-8 leading-relaxed">
-        Cotiza gratis en minutos. Comparamos precios de múltiples aseguradoras para ti.
+        Solicita tu cotización gratis hoy mismo. Sin compromiso.
       </p>
       <div class="space-y-3">
         <a 
@@ -200,5 +264,6 @@ const relatedServices = [
       </div>
     </div>
   </section>
+
   <Footer />
 </Layout>

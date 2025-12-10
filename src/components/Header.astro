@@ -1,20 +1,58 @@
 ---
+
+const whatsappNumber = "+5216691178152";
+const whatsappMessage = "Hola, me interesa obtener información sobre seguros";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border/30">
   <div class="max-w-container mx-auto px-6 py-4">
-    <button 
-      id="menu-btn"
-      class="w-12 h-12 flex flex-col justify-center items-center gap-2 relative cursor-pointer md:hidden"
-      aria-label="Toggle menu"
-    >
-      <span class="hamburger-line block w-7 h-0.5 bg-black transition-all duration-300"></span>
-      <span class="hamburger-line block w-7 h-0.5 bg-black transition-all duration-300"></span>
-      <span class="hamburger-line block w-7 h-0.5 bg-black transition-all duration-300"></span>
-    </button>
-
+    <div class="flex items-center justify-between">
+      <!-- Hamburger Menu (Mobile Only) -->
+      <button 
+        id="menu-btn"
+        class="w-12 h-12 flex flex-col justify-center items-center gap-2 relative cursor-pointer md:hidden"
+        aria-label="Toggle menu"
+      >
+        <span class="hamburger-line block w-7 h-0.5 bg-black transition-all duration-300"></span>
+        <span class="hamburger-line block w-7 h-0.5 bg-black transition-all duration-300"></span>
+        <span class="hamburger-line block w-7 h-0.5 bg-black transition-all duration-300"></span>
+      </button>
+      <!-- Logo (Tablet/Desktop) -->
+      <div class="hidden md:block">
+        <a href="/" class="font-heading font-bold text-xl text-text-heading hover:text-blue-primary transition-colors">
+          Mendoza Coco Seguros
+        </a>
+      </div>
+      <!-- Desktop Navigation (Tablet+) -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/" class="text-text-heading font-medium hover:text-blue-primary transition-colors">
+          Inicio
+        </a>
+        <a href="#servicios" class="text-text-heading font-medium hover:text-blue-primary transition-colors">
+          Servicios
+        </a>
+        <a href="#nosotros" class="text-text-heading font-medium hover:text-blue-primary transition-colors">
+          Nosotros
+        </a>
+        <a href="#contacto" class="text-text-heading font-medium hover:text-blue-primary transition-colors">
+          Contacto
+        </a>
+      </nav>
+      <!-- CTA Button (Tablet/Desktop) -->
+      <div class="hidden md:block">
+        <a 
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer" 
+          class="inline-block bg-blue-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-dark transition-colors"
+        >
+          Cotizar
+        </a>
+      </div>
+    </div>
   </div>
-
   <!-- Mobile Menu (Closed by default) -->
   <nav id="mobile-menu" class="grid grid-rows-[0fr] transition-all duration-300 ease-in-out bg-beige border-t border-border/30 md:hidden">
     <div class="overflow-hidden">
@@ -28,10 +66,11 @@
   </nav>
 </header>
 
-<div class="h-[72px]"></div>
+<!-- Spacer -->
+<div class="h-[72px] md:h-20"></div>
 
 <style>
-  /* Hamburger animation - becomes X when open */
+  /* Hamburger animation */
   #menu-btn.open .hamburger-line:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
   }
@@ -44,7 +83,7 @@
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
-  /* Menu opens - grid expands */
+  /* Menu opens */
   #mobile-menu.open {
     grid-template-rows: 1fr;
   }
@@ -60,7 +99,6 @@
       mobileMenu.classList.toggle('open');
     });
 
-    // Close menu when clicking a link
     const menuLinks = mobileMenu.querySelectorAll('a');
     menuLinks.forEach(link => {
       link.addEventListener('click', () => {

@@ -1,0 +1,229 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const whatsappNumber = "+5216691178152";
+const whatsappMessage = "Hola, me interesa información sobre el Seguro de Gastos Médicos";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const coverage = [
+  {
+    icon: '🏥',
+    iconColor: 'text-red-500',
+    title: 'Hospitalización'
+  },
+  {
+    icon: '🩹',
+    iconColor: 'text-blue-500',
+    title: 'Cirugías'
+  },
+  {
+    icon: '💊',
+    iconColor: 'text-purple-500',
+    title: 'Medicamentos'
+  },
+  {
+    icon: '🩺',
+    iconColor: 'text-blue-600',
+    title: 'Consultas'
+  },
+  {
+    icon: '🔬',
+    iconColor: 'text-cyan-500',
+    title: 'Estudios clínicos'
+  },
+  {
+    icon: '🚑',
+    iconColor: 'text-red-600',
+    title: 'Emergencias'
+  },
+  {
+    icon: '🤰',
+    iconColor: 'text-pink-500',
+    title: 'Maternidad'
+  },
+  {
+    icon: '♿',
+    iconColor: 'text-blue-500',
+    title: 'Rehabilitación'
+  }
+];
+
+const reasons = [
+  {
+    icon: '💰',
+    iconBg: 'bg-blue-100',
+    title: 'Evita la ruina financiera',
+    description: 'Un accidente o enfermedad grave puede costar cientos de miles, agotando tus ahorros y patrimonio.'
+  },
+  {
+    icon: '⏰',
+    iconBg: 'bg-orange-100',
+    title: 'Las enfermedades no avisan',
+    description: 'Estar preparado te da la tranquilidad de que, pase lo que pase, tendrás el respaldo necesario.'
+  },
+  {
+    icon: '🛡️',
+    iconBg: 'bg-green-100',
+    title: 'Acceso a los mejores hospitales',
+    description: 'Elige libremente entre una amplia red de especialistas y hospitales privados de primer nivel.'
+  },
+  {
+    icon: '👨‍👩‍👧‍👦',
+    iconBg: 'bg-purple-100',
+    title: 'Protege a toda tu familia',
+    description: 'Asegura el bienestar de tus seres queridos con una póliza que los cubra a todos.'
+  }
+];
+
+const relatedServices = [
+  {
+    icon: '🏠',
+    title: 'Seguro de Hogar',
+    description: 'Protege tu patrimonio más valioso.',
+    link: '/seguro-hogar'
+  },
+  {
+    icon: '🚗',
+    title: 'Seguro de Auto',
+    description: 'Conduce con tranquilidad.',
+    link: '/seguro-auto'
+  },
+  {
+    icon: '🐷',
+    title: 'Plan de Retiro',
+    description: 'Asegura un futuro tranquilo.',
+    link: '/plan-retiro'
+  }
+];
+---
+
+<Layout title="Seguro de Gastos Médicos - Mendoza Coco Seguros">
+  <Header />
+  <section class="bg-beige-default pt-8 pb-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      <a href="/" class="inline-flex items-center gap-2 text-blue-primary font-medium mb-6 hover:underline">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Volver
+      </a>
+      <div class="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center text-3xl mb-6 mx-auto">
+        🛡️
+      </div>
+      <h1 class="font-heading font-bold text-3xl text-text-heading text-center mb-4">
+        Seguro de Gastos Médicos
+      </h1>
+      <p class="text-lg font-semibold text-text-heading text-center mb-6">
+        Cuida tu salud y la de tu familia sin preocupaciones.
+      </p>
+      <p class="text-text-body leading-relaxed text-center">
+        Te protege financieramente ante una enfermedad o accidente. Cuando la salud se complica, 
+        este seguro paga por ti los gastos médicos más costosos, como la hospitalización, cirugías, 
+        medicamentos, estudios y tratamientos. Accede a la mejor atención médica sin descapitalizar 
+        tu patrimonio
+      </p>
+    </div>
+  </section>
+
+
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-4">
+        ¿Qué cubre el Seguro?
+      </h2>
+      <p class="text-center text-text-body mb-10">
+        Protección integral para tu salud
+      </p>
+      <div class="grid grid-cols-2 gap-4">
+        {coverage.map((item) => (
+          <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition-shadow cursor-pointer">
+            <div class={`text-4xl mb-3 ${item.iconColor}`}>
+              {item.icon}
+            </div>
+            <h3 class="font-semibold text-text-heading text-sm">
+              {item.title}
+            </h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-12">
+        ¿Por qué necesitas un seguro Médico?
+      </h2>
+      <div class="space-y-8">
+        {reasons.map((reason) => (
+          <div class="flex gap-4 items-start">
+            <div class={`w-14 h-14 rounded-full ${reason.iconBg} flex items-center justify-center text-2xl shrink-0`}>
+              {reason.icon}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-text-heading mb-2">{reason.title}</h3>
+              <p class="text-sm text-text-body leading-relaxed">{reason.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-primary py-12 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-heading font-bold text-2xl text-white mb-4">
+        Tu salud es tu mayor riqueza
+      </h2>
+      <p class="text-white/90 mb-8 leading-relaxed">
+        Protégela hoy. No esperes a que sea tarde.
+      </p>
+      <div class="space-y-3 mb-6">
+        <a 
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 w-full bg-whatsapp text-white font-semibold py-4 px-6 rounded-lg hover:bg-[#20BA5A] transition-colors"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Contactar por WhatsApp
+        </a>
+      </div>
+      <p class="text-white/80 text-sm">
+        Cotizaciones gratuitas y sin compromiso.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-12 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl text-text-heading mb-8">
+        También te puede interesar
+      </h2>
+      <div class="space-y-3">
+        {relatedServices.map((service) => (
+          <a 
+            href={service.link}
+            class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
+          >
+            <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center text-2xl shrink-0">
+              {service.icon}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-text-heading">{service.title}</h3>
+              <p class="text-sm text-text-body">{service.description}</p>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
