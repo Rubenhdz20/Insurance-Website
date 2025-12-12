@@ -1,46 +1,90 @@
-# Astro Starter Kit: Basics
+# Coco Mendoza Seguros
 
-```sh
-npm create astro@latest -- --template basics
-```
+Sitio web corporativo para Coco Mendoza Seguros, asesor certificado de seguros Allianz. La plataforma ofrece información sobre servicios de seguros personalizados incluyendo hogar, auto, salud y retiro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tecnologías
 
-## 🚀 Project Structure
+- **Framework:** Astro 5.16.3
+- **Estilos:** Tailwind CSS 4.1.17
+- **Fuentes:** Inter (cuerpo), Poppins (encabezados)
+- **Package Manager:** npm
 
-Inside of your Astro project, you'll see the following folders and files:
+## Estructura del Proyecto
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+InsuranceWeb/
+├── src/
+│   ├── assets/
+│   │   ├── icon/         # Iconos del sitio
+│   │   └── logo.png      # Logo principal
+│   ├── components/
+│   │   ├── Header.astro  # Navegación principal con menú móvil
+│   │   └── Hero.astro    # Sección hero con CTA de WhatsApp
+│   ├── layouts/
+│   │   └── Layout.astro  # Layout base del sitio
+│   ├── pages/
+│   │   └── index.astro   # Página principal
+│   └── styles/
+│       └── global.css    # Estilos globales
+├── astro.config.mjs      # Configuración de Astro
+├── tailwind.config.mjs   # Configuración de Tailwind
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Características
 
-## 🧞 Commands
+- **Diseño Responsive:** Optimizado para dispositivos móviles y desktop
+- **Integración WhatsApp:** Contacto directo desde el hero
+- **Navegación Sticky:** Header fijo con menú hamburguesa móvil
+- **Sistema de Diseño Personalizado:** Paleta de colores y tipografía definida
+- **Certificación Allianz:** Badge de certificación visible
 
-All commands are run from the root of the project, from a terminal:
+## Comandos
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Todos los comandos se ejecutan desde la raíz del proyecto:
 
-## 👀 Want to learn more?
+| Comando           | Acción                                          |
+| :---------------- | :---------------------------------------------- |
+| `npm install`     | Instala las dependencias                        |
+| `npm run dev`     | Inicia servidor de desarrollo en `localhost:4321` |
+| `npm run build`   | Genera el sitio de producción en `./dist/`      |
+| `npm run preview` | Vista previa del build de producción            |
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Configuración
+
+### WhatsApp
+
+Para actualizar el número de WhatsApp, edita la variable `whatsappNumber` en `src/components/Hero.astro`:
+
+```astro
+const whatsappNumber = "521234567890"; // Actualizar con número real
+```
+
+### Paleta de Colores
+
+El sitio utiliza colores personalizados definidos en `tailwind.config.mjs`:
+
+- **Fondos:** Beige (`#FAF7F2`)
+- **Primario:** Azul (`#2B7EC1`)
+- **Oscuro:** Azul Oscuro (`#003E7A`)
+- **Acento:** WhatsApp (`#25D366`)
+
+## Estructura de Navegación
+
+El sitio está diseñado como una aplicación de página única (SPA) con enlaces de ancla:
+
+- `#servicios` - Sección de servicios
+- `#nosotros` - Sección acerca de
+- `#contacto` - Sección de contacto
+- `#cotizar` - Formulario de cotización
+
+## Productos de Seguro
+
+- Seguro de Hogar
+- Seguro de Auto
+- Seguro de Salud
+- Seguro de Retiro
+
+## Licencia
+
+© 2025 Coco Mendoza Seguros. Todos los derechos reservados.
