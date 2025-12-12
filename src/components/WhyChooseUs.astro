@@ -38,57 +38,48 @@ const differentiators = [
 ];
 ---
 
-<section class="bg-blue-primary py-16 px-6">
-  <div class="max-w-container mx-auto">
-    <!-- PART 1: Por qué elegir a Coco Mendoza Seguros -->
-    <div class="mb-16">
-      <!-- Section Title -->
-      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-4">
+<section class="bg-blue-primary py-16 px-6 lg:py-24">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-16 lg:mb-24">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-white text-center mb-4 lg:mb-6">
         Por qué elegir a Coco Mendoza Seguros?
       </h2>
-      <!-- Intro Text -->
-      <p class="text-white/90 text-center max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p class="text-white/90 text-center text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-10 lg:mb-14 leading-relaxed">
         Entendemos que elegir un seguro es una decisión importante. Por eso, nos 
         dedicamos a ofrecerte la mejor asesoría.
       </p>
-      <!-- Benefits Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-10 lg:mb-14 max-w-5xl mx-auto">
         {benefits.map((benefit) => (
-          <article class="bg-white rounded-xl p-6 flex gap-4 items-center shadow-sm cursor-pointer">
-            <!-- Icon -->
-            <div class="w-10 h-10 rounded-full bg-blue-light flex items-center justify-center text-2xl shrink-0">
+          <article class="bg-white rounded-xl p-6 lg:p-8 flex gap-4 lg:gap-6 items-start shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-blue-light flex items-center justify-center text-2xl lg:text-3xl shrink-0">
               {benefit.icon}
             </div>
-            <!-- Content -->
             <div class="flex-1">
-              <h3 class="font-heading font-bold text-lg text-text-heading mb-2">
+              <h3 class="font-heading font-bold text-lg lg:text-xl text-text-heading mb-2">
                 {benefit.title}
               </h3>
-              <p class="text-text-body text-sm leading-relaxed">
+              <p class="text-text-body text-sm md:text-base leading-relaxed">
                 {benefit.description}
               </p>
             </div>
           </article>
         ))}
       </div>
-      <!-- Closing Text -->
-      <p class="text-white text-center font-semibold text-lg md:text-xl">
+      <p class="text-white text-center font-semibold text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto">
         Somos más que asesores, somos tus aliados de confianza en cada paso
       </p>
     </div>
     <div>
-      <!-- Section Title -->
-      <h2 class="font-heading font-bold text-2xl md:text-3xl text-white text-center mb-10">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-white text-center mb-10 lg:mb-14">
         Lo que nos diferencia
       </h2>
-      <!-- Differentiators Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
         {differentiators.map((item) => (
-          <article class="bg-white rounded-xl p-8 text-center shadow-sm">
-            <h3 class="font-heading font-bold text-xl text-text-heading mb-4">
+          <article class="bg-white rounded-xl p-8 lg:p-10 text-center shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="font-heading font-bold text-xl lg:text-2xl text-text-heading mb-4 lg:mb-6">
               {item.title}
             </h3>
-            <p class="text-text-body text-sm leading-relaxed">
+            <p class="text-text-body text-sm md:text-base leading-relaxed">
               {item.description}
             </p>
           </article>

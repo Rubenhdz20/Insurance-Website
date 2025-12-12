@@ -9,7 +9,6 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
 <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border/30">
   <div class="max-w-container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
-      <!-- Hamburger Menu (Mobile Only) -->
       <button 
         id="menu-btn"
         class="w-12 h-12 flex flex-col justify-center items-center gap-2 relative cursor-pointer md:hidden"
@@ -19,13 +18,11 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
         <span class="hamburger-line block w-7 h-0.5 bg-black transition-all duration-300"></span>
         <span class="hamburger-line block w-7 h-0.5 bg-black transition-all duration-300"></span>
       </button>
-      <!-- Logo (Tablet/Desktop) -->
       <div class="hidden md:block">
         <a href="/" class="font-heading font-bold text-xl text-text-heading hover:text-blue-primary transition-colors">
-          Mendoza Coco Seguros
+          Coco Mendoza Seguros
         </a>
       </div>
-      <!-- Desktop Navigation (Tablet+) -->
       <nav class="hidden md:flex items-center gap-8">
         <a href="/" class="text-text-heading font-medium hover:text-blue-primary transition-colors">
           Inicio
@@ -40,7 +37,6 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
           Contacto
         </a>
       </nav>
-      <!-- CTA Button (Tablet/Desktop) -->
       <div class="hidden md:block">
         <a 
           href={whatsappLink}
@@ -53,7 +49,6 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       </div>
     </div>
   </div>
-  <!-- Mobile Menu (Closed by default) -->
   <nav id="mobile-menu" class="grid grid-rows-[0fr] transition-all duration-300 ease-in-out bg-beige border-t border-border/30 md:hidden">
     <div class="overflow-hidden">
       <ul class="px-6 py-6 space-y-5">
@@ -65,12 +60,9 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     </div>
   </nav>
 </header>
-
-<!-- Spacer -->
 <div class="h-[72px] md:h-20"></div>
 
 <style>
-  /* Hamburger animation */
   #menu-btn.open .hamburger-line:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
   }
@@ -82,8 +74,6 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   #menu-btn.open .hamburger-line:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
-
-  /* Menu opens */
   #mobile-menu.open {
     grid-template-rows: 1fr;
   }

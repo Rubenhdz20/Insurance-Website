@@ -44,11 +44,9 @@ const contactItems = [
 
 <section id="contacto" class="bg-beige-default py-16 px-6">
   <div class="max-w-container mx-auto">
-    <!-- Section Title -->
     <h2 class="font-heading font-bold text-3xl md:text-4xl text-text-heading text-center mb-12">
       Contáctanos
     </h2>
-    <!-- Contact Items -->
     <div class="max-w-md mx-auto space-y-4">
       {contactItems.map((item) => {
         const Component = item.link ? 'a' : 'div';
@@ -62,7 +60,6 @@ const contactItems = [
             {...linkProps}
             class="bg-white rounded-lg p-5 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
           >
-            <!-- Icon -->
             <div class={`w-8 h-8 shrink-0 flex items-center justify-center ${item.iconColor}`}>
               {item.icon === 'location' && (
                 <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
