@@ -109,166 +109,138 @@ const relatedServices = [
 
 <Layout title="Plan de Ahorro para el Retiro - Mendoza Coco Seguros">
   <Header />
-  <!-- Hero Section -->
-  <section class="bg-beige-default pt-8 pb-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      
-      <!-- Back Button -->
-      <a href="/" class="inline-flex items-center gap-2 text-blue-primary font-medium mb-6 hover:underline">
+  <section class="bg-beige-default pt-8 pb-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      <a href="/" class="inline-flex items-center gap-2 text-blue-primary font-medium mb-8 lg:mb-10 hover:underline">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
         </svg>
         Volver
       </a>
-
-      <!-- Icon -->
-      <div class="w-16 h-16 rounded-2xl bg-blue-light flex items-center justify-center text-3xl mb-6 mx-auto">
+      <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-blue-light flex items-center justify-center text-3xl lg:text-4xl mb-6 lg:mb-8 mx-auto">
         🐷
       </div>
-
-      <!-- Title -->
-      <h1 class="font-heading font-bold text-3xl text-text-heading text-center mb-4">
+      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-heading text-center mb-4 lg:mb-6">
         Plan de Ahorro para el Retiro
       </h1>
-
-      <!-- Subtitle -->
-      <p class="text-lg font-semibold text-text-heading text-center mb-6">
+      <p class="text-lg md:text-xl lg:text-2xl font-semibold text-text-heading text-center mb-6 lg:mb-8">
         Construye el futuro que mereces
       </p>
-
-      <!-- Description -->
-      <p class="text-text-body leading-relaxed text-center">
+      <p class="text-text-body text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto">
         Es una estrategia financiera diseñada para que tú decidas cómo quieres vivir tu retiro. 
         Tu dinero crece con beneficios fiscales y rendimientos. Planifica hoy para disfrutar mañana 
         de estabilidad financiera, libertad y calidad de vida que deseas en tu futuro.
       </p>
-
     </div>
   </section>
-  <!-- What Includes Section -->
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      
-      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-8">
+
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-6 lg:mb-8">
         ¿Qué incluye un Plan de Ahorro para el Retiro?
       </h2>
-
-      <p class="text-center text-text-heading font-semibold mb-8">
+      <p class="text-center text-text-heading text-base md:text-lg font-semibold mb-10 lg:mb-12">
         Más que un ahorro, es tu estrategia de libertad financiera.
       </p>
-
-      <div class="space-y-6">
+      <div class="space-y-6 lg:space-y-8 max-w-3xl mx-auto">
         {includes.map((item) => (
-          <div class="flex gap-4 items-start">
+          <div class="flex gap-4 lg:gap-6 items-start">
             <div class="shrink-0 mt-1">
-              <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 lg:w-7 lg:h-7 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
               </svg>
             </div>
             <div>
-              <h3 class="font-semibold text-text-heading mb-1">{item.title}</h3>
-              <p class="text-sm text-text-body">{item.description}</p>
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-2">{item.title}</h3>
+              <p class="text-sm md:text-base text-text-body leading-relaxed">{item.description}</p>
             </div>
           </div>
         ))}
       </div>
-
     </div>
   </section>
-  <!-- Why You Need Section -->
-  <section class="bg-gray-50 py-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      
-      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-12">
+
+  <section class="bg-gray-50 py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto">    
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-12 lg:mb-16">
         ¿Por qué necesitas un Plan de Ahorro para el Retiro?
       </h2>
-
-      <div class="space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {reasons.map((reason) => (
           <div class="text-center">
-            <div class={`w-16 h-16 rounded-full ${reason.iconBg} flex items-center justify-center text-3xl mx-auto mb-4`}>
+            <div class={`w-16 h-16 lg:w-20 lg:h-20 rounded-full ${reason.iconBg} flex items-center justify-center text-3xl lg:text-4xl mx-auto mb-4 lg:mb-6`}>
               {reason.icon}
             </div>
-            <h3 class="font-semibold text-text-heading mb-2">{reason.title}</h3>
-            <p class="text-sm text-text-body">{reason.description}</p>
+            <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-3">{reason.title}</h3>
+            <p class="text-sm md:text-base text-text-body leading-relaxed">{reason.description}</p>
           </div>
         ))}
       </div>
-
     </div>
   </section>
-  <!-- How to Start Section -->
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      
-      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-3">
+
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-4 lg:mb-6">
         ¿Cómo empezar tu plan de retiro?
       </h2>
-
-      <p class="text-center text-text-body mb-10">En 5 pasos sencillos.</p>
-
-      <div class="space-y-6 mb-12">
+      <p class="text-center text-text-body text-base md:text-lg mb-10 lg:mb-14">En 5 pasos sencillos.</p>
+      <div class="space-y-6 lg:space-y-8 max-w-3xl mx-auto">
         {steps.map((step) => (
-          <div class="flex gap-4 items-start">
-            <div class="w-10 h-10 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold shrink-0">
+          <div class="flex gap-4 lg:gap-6 items-start">
+            <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold text-lg lg:text-xl shrink-0">
               {step.number}
             </div>
-            <div class="flex-1">
-              <h3 class="font-semibold text-text-heading mb-1">{step.title}</h3>
-              <p class="text-sm text-text-body">{step.description}</p>
+            <div class="flex-1 pt-1">
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-2">{step.title}</h3>
+              <p class="text-sm md:text-base text-text-body leading-relaxed">{step.description}</p>
             </div>
           </div>
         ))}
       </div>
-
     </div>
   </section>
-  <!-- CTA Section -->
-  <section class="bg-blue-primary py-12 px-6">
-    <div class="max-w-2xl mx-auto text-center">
-      
-      <h2 class="font-heading font-bold text-2xl text-white mb-4">
+
+  <section class="bg-blue-primary py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-white mb-6 lg:mb-8">
         Tu futuro comienza con una decisión hoy
       </h2>
-
-      <p class="text-white/90 mb-8 leading-relaxed">
+      <p class="text-white/90 text-base md:text-lg lg:text-xl mb-8 lg:mb-10 leading-relaxed max-w-2xl mx-auto">
         Agenda tu asesoría gratuita. Sin compromiso. Descubre cuánto podrías tener al retirarte.
       </p>
-
-      <div class="space-y-3">
+      <div class="max-w-md mx-auto cursor-pointer">
         <a 
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          class="block w-full bg-whatsapp text-white font-semibold py-4 px-6 rounded-lg hover:bg-[#20BA5A] transition-colors"
+          class="block w-full bg-whatsapp text-white font-semibold py-4 px-8 rounded-lg hover:bg-[#20BA5A] transition-colors text-lg"
         >
           Contactar por WhatsApp
         </a>
       </div>
     </div>
   </section>
-  <!-- Related Services -->
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      
-      <h2 class="font-heading font-bold text-2xl text-text-heading mb-8">
+
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto"> 
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading mb-10 lg:mb-12">
         También te puede interesar
       </h2>
-
-      <div class="space-y-3">
+      <div class="space-y-4 max-w-3xl cursor-pointer">
         {relatedServices.map((service) => (
           <a 
             href={service.link}
-            class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
+            class="flex items-center gap-4 lg:gap-6 p-5 lg:p-6 bg-gray-50 rounded-lg hover:bg-gray-100 hover:shadow-md transition-all group"
           >
-            <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center text-2xl shrink-0">
+            <div class="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-blue-light flex items-center justify-center text-3xl lg:text-4xl shrink-0">
               {service.icon}
             </div>
             <div class="flex-1">
-              <h3 class="font-semibold text-text-heading">{service.title}</h3>
-              <p class="text-sm text-text-body">{service.description}</p>
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-1">{service.title}</h3>
+              <p class="text-sm md:text-base text-text-body">{service.description}</p>
             </div>
-            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-primary transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
           </a>

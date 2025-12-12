@@ -129,24 +129,24 @@ const relatedServices = [
 
 <Layout title="Seguro de Hogar - Mendoza Coco Seguros">
   <Header />
-  <section class="bg-beige-default pt-8 pb-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      <a href="/" class="inline-flex items-center gap-2 text-blue-primary font-medium mb-6 hover:underline">
+  <section class="bg-beige-default pt-8 pb-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      <a href="/" class="inline-flex items-center gap-2 text-blue-primary font-medium mb-8 lg:mb-10 hover:underline">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
         </svg>
         Volver
       </a>
-      <div class="w-16 h-16 rounded-2xl bg-blue-light flex items-center justify-center text-3xl mb-6 mx-auto">
+      <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-blue-light flex items-center justify-center text-3xl lg:text-4xl mb-6 lg:mb-8 mx-auto">
         🏠
       </div>
-      <h1 class="font-heading font-bold text-3xl text-text-heading text-center mb-4">
+      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-heading text-center mb-4 lg:mb-6">
         Seguro de Hogar
       </h1>
-      <p class="text-lg font-semibold text-text-heading text-center mb-6">
+      <p class="text-lg md:text-xl lg:text-2xl font-semibold text-text-heading text-center mb-6 lg:mb-8">
         Protege tu casa, tus bienes y tu bienestar
       </p>
-      <p class="text-text-body leading-relaxed text-center">
+      <p class="text-text-body text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto">
         Esta protección cuida tu casa, tus bienes y tu tranquilidad frente a imprevistos como incendios, 
         robos, fugas de agua o desastres naturales. Vive sin preocupaciones sabiendo que tu patrimonio 
         más valioso está protegido.
@@ -154,18 +154,18 @@ const relatedServices = [
     </div>
   </section>
 
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-12">
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-12 lg:mb-16">
         ¿Qué cubre el Seguro de Hogar?
       </h2>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 max-w-4xl mx-auto">
         {coverage.map((item) => (
-          <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition-shadow cursor-pointer">
-            <div class={`text-4xl mb-3 ${item.iconColor}`}>
+          <div class="bg-gray-50 rounded-xl p-6 lg:p-8 text-center hover:shadow-md transition-shadow">
+            <div class={`text-4xl lg:text-5xl mb-3 lg:mb-4 ${item.iconColor}`}>
               {item.icon}
             </div>
-            <h3 class="font-semibold text-text-heading text-sm">
+            <h3 class="font-semibold text-text-heading text-sm md:text-base">
               {item.title}
             </h3>
           </div>
@@ -174,20 +174,20 @@ const relatedServices = [
     </div>
   </section>
 
-  <section class="bg-gray-50 py-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-12">
+  <section class="bg-gray-50 py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-12 lg:mb-16">
         ¿Por qué necesitas un Seguro de Hogar?
       </h2>
-      <div class="space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {reasons.map((reason) => (
-          <div class="flex gap-4 items-start">
-            <div class={`w-14 h-14 rounded-full ${reason.iconBg} flex items-center justify-center text-2xl shrink-0`}>
+          <div class="flex gap-4 lg:gap-6 items-start">
+            <div class={`w-14 h-14 lg:w-16 lg:h-16 rounded-full ${reason.iconBg} flex items-center justify-center text-2xl lg:text-3xl shrink-0`}>
               {reason.icon}
             </div>
             <div class="flex-1">
-              <h3 class="font-semibold text-text-heading mb-2">{reason.title}</h3>
-              <p class="text-sm text-text-body leading-relaxed">{reason.description}</p>
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-2">{reason.title}</h3>
+              <p class="text-sm md:text-base text-text-body leading-relaxed">{reason.description}</p>
             </div>
           </div>
         ))}
@@ -195,21 +195,21 @@ const relatedServices = [
     </div>
   </section>
 
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="font-heading font-bold text-2xl text-text-heading text-center mb-3">
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-4 lg:mb-6">
         ¿Cómo funciona?
       </h2>
-      <p class="text-center text-text-body mb-10">Es más fácil de lo que piensas</p>
-      <div class="space-y-6">
+      <p class="text-center text-text-body text-base md:text-lg mb-10 lg:mb-14">Es más fácil de lo que piensas</p>
+      <div class="space-y-6 lg:space-y-8 max-w-3xl mx-auto">
         {steps.map((step) => (
-          <div class="flex gap-4 items-start">
-            <div class="w-12 h-12 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold text-xl shrink-0">
+          <div class="flex gap-4 lg:gap-6 items-start">
+            <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold text-lg lg:text-xl shrink-0">
               {step.number}
             </div>
-            <div class="flex-1">
-              <h3 class="font-semibold text-text-heading mb-1">{step.title}</h3>
-              <p class="text-sm text-text-body">{step.description}</p>
+            <div class="flex-1 pt-1">
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-2">{step.title}</h3>
+              <p class="text-sm md:text-base text-text-body leading-relaxed">{step.description}</p>
             </div>
           </div>
         ))}
@@ -217,20 +217,20 @@ const relatedServices = [
     </div>
   </section>
 
-  <section class="bg-blue-primary py-12 px-6">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="font-heading font-bold text-2xl text-white mb-4">
+  <section class="bg-blue-primary py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-white mb-6 lg:mb-8">
         ¿Listo para proteger tu hogar?
       </h2>
-      <p class="text-white/90 mb-8 leading-relaxed">
+      <p class="text-white/90 text-base md:text-lg lg:text-xl mb-8 lg:mb-10 leading-relaxed max-w-2xl mx-auto">
         Solicita tu cotización gratis hoy mismo. Sin compromiso.
       </p>
-      <div class="space-y-3">
+      <div class="max-w-md mx-auto">
         <a 
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          class="block w-full bg-whatsapp text-white font-semibold py-4 px-6 rounded-lg hover:bg-[#20BA5A] transition-colors"
+          class="block w-full bg-whatsapp text-white font-semibold py-4 px-8 rounded-lg hover:bg-[#20BA5A] transition-colors text-lg"
         >
           Contactar por WhatsApp
         </a>
@@ -238,25 +238,25 @@ const relatedServices = [
     </div>
   </section>
 
-  <section class="bg-white py-12 px-6">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="font-heading font-bold text-2xl text-text-heading mb-8">
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading mb-10 lg:mb-12">
         También te puede interesar
       </h2>
-      <div class="space-y-3">
+      <div class="space-y-4 max-w-3xl">
         {relatedServices.map((service) => (
           <a 
             href={service.link}
-            class="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
+            class="flex items-center gap-4 lg:gap-6 p-5 lg:p-6 bg-gray-50 rounded-lg hover:bg-gray-100 hover:shadow-md transition-all group"
           >
-            <div class="w-12 h-12 rounded-full bg-blue-light flex items-center justify-center text-2xl shrink-0">
+            <div class="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-blue-light flex items-center justify-center text-3xl lg:text-4xl shrink-0">
               {service.icon}
             </div>
             <div class="flex-1">
-              <h3 class="font-semibold text-text-heading">{service.title}</h3>
-              <p class="text-sm text-text-body">{service.description}</p>
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-1">{service.title}</h3>
+              <p class="text-sm md:text-base text-text-body">{service.description}</p>
             </div>
-            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-primary transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
           </a>
@@ -264,6 +264,5 @@ const relatedServices = [
       </div>
     </div>
   </section>
-
   <Footer />
 </Layout>
