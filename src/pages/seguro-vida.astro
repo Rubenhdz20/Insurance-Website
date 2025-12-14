@@ -1,0 +1,302 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const whatsappNumber = "+5216691178152";
+const whatsappMessage = "Hola, me interesa información sobre el Seguro de Vida";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const includes = [
+  {
+    icon: '💰',
+    iconColor: 'text-green-500',
+    title: 'Suma asegurada',
+    description: 'Monto que reciben tus seres queridos si tú llegas a faltar.'
+  },
+  {
+    icon: '🛡️',
+    iconColor: 'text-blue-500',
+    title: 'Cobertura por fallecimiento',
+    description: 'Protege financieramente a tu familia en los momentos más difíciles.'
+  },
+  {
+    icon: '🏥',
+    iconColor: 'text-red-500',
+    title: 'Enfermedades graves',
+    description: 'Cobertura adicional ante diagnósticos de enfermedades críticas.'
+  },
+  {
+    icon: '♿',
+    iconColor: 'text-purple-500',
+    title: 'Invalidez',
+    description: 'Protección en caso de invalidez total o permanente.'
+  },
+  {
+    icon: '🐷',
+    iconColor: 'text-orange-500',
+    title: 'Ahorro o inversión',
+    description: 'En planes mixtos, puedes usarlo para metas a largo plazo.'
+  },
+  {
+    icon: '⚰️',
+    iconColor: 'text-gray-600',
+    title: 'Gastos funerarios',
+    description: 'Cubre los gastos del servicio funerario para no dejar deudas.'
+  }
+];
+
+const reasons = [
+  {
+    icon: '👨‍👩‍👧‍👦',
+    iconBg: 'bg-blue-100',
+    title: 'Protege a quienes dependen de ti',
+    description: 'Si tu familia depende de tus ingresos, un seguro de vida garantiza su estabilidad económica.'
+  },
+  {
+    icon: '😌',
+    iconBg: 'bg-green-100',
+    title: 'Da tranquilidad en momentos difíciles',
+    description: 'Saber que tus seres queridos estarán protegidos te permite vivir con mayor paz mental.'
+  },
+  {
+    icon: '💳',
+    iconBg: 'bg-red-100',
+    title: 'Evita deudas y problemas financieros',
+    description: 'Tu familia no quedará con deudas hipotecarias, escolares o de otro tipo sin forma de pagarlas.'
+  },
+  {
+    icon: '📈',
+    iconBg: 'bg-purple-100',
+    title: 'Estrategia de ahorro y retiro',
+    description: 'Los planes mixtos te permiten acumular capital mientras te proteges.'
+  }
+];
+
+const steps = [
+  {
+    number: 1,
+    title: 'Contratas el seguro y eliges la suma asegurada',
+    description: 'Definimos juntos cuánto necesita tu familia para mantener su calidad de vida.'
+  },
+  {
+    number: 2,
+    title: 'Pagas una prima mensual o anual',
+    description: 'El costo depende de tu edad, estado de salud y la suma asegurada elegida.'
+  },
+  {
+    number: 3,
+    title: 'Tus beneficiarios reciben el dinero',
+    description: 'Si llegas a faltar, ellos recibirán la suma asegurada para cubrir sus necesidades.'
+  },
+  {
+    number: 4,
+    title: 'En planes con ahorro, tú recibes beneficios',
+    description: 'Al final del plazo, puedes recibir una parte del ahorro acumulado para tu retiro.'
+  }
+];
+
+const relatedServices = [
+  {
+    icon: '🏠',
+    title: 'Seguro de Hogar',
+    description: 'Protege tu patrimonio más valioso.',
+    link: '/seguros-hogar'
+  },
+  {
+    icon: '🏥',
+    title: 'Gastos Médicos',
+    description: 'Tu salud y la de tu familia es primero.',
+    link: '/gastos-medicos'
+  },
+  {
+    icon: '🐷',
+    title: 'Plan de Retiro',
+    description: 'Asegura un futuro tranquilo.',
+    link: '/plan-retiro'
+  }
+];
+---
+
+<Layout title="Seguro de Vida - Mendoza Coco Seguros">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="bg-beige-default pt-8 pb-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Back Button -->
+      <a href="/" class="inline-flex items-center gap-2 text-blue-primary font-medium mb-8 lg:mb-10 hover:underline">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Volver
+      </a>
+
+      <!-- Icon -->
+      <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-blue-light flex items-center justify-center text-3xl lg:text-4xl mb-6 lg:mb-8 mx-auto">
+        💙
+      </div>
+
+      <!-- Title -->
+      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-text-heading text-center mb-4 lg:mb-6">
+        Seguro de Vida
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg md:text-xl lg:text-2xl font-semibold text-text-heading text-center mb-6 lg:mb-8">
+        Protege a quien más amas, asegura su futuro
+      </p>
+
+      <!-- Description -->
+      <p class="text-text-body text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto">
+        Un seguro de vida es un contrato que garantiza el pago de una suma de dinero a tus beneficiarios 
+        en caso de fallecimiento. También puede incluir protección en vida como ahorro, cobertura por 
+        invalidez, enfermedades graves y más. Es la forma más responsable de asegurar que tus seres 
+        queridos estarán protegidos pase lo que pase.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- What Includes Section -->
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-6 lg:mb-8">
+        ¿Qué incluye un Seguro de Vida?
+      </h2>
+
+      <p class="text-center text-text-body text-base md:text-lg mb-10 lg:mb-12">
+        Protección integral para ti y tu familia
+      </p>
+
+      <div class="space-y-6 lg:space-y-8 max-w-3xl mx-auto">
+        {includes.map((item) => (
+          <div class="flex gap-4 lg:gap-6 items-start">
+            <div class={`text-3xl lg:text-4xl shrink-0 ${item.iconColor}`}>
+              {item.icon}
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-2">{item.title}</h3>
+              <p class="text-sm md:text-base text-text-body leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why You Need Section -->
+  <section class="bg-gray-50 py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-12 lg:mb-16">
+        ¿Por qué necesitas un Seguro de Vida?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {reasons.map((reason) => (
+          <div class="flex gap-4 lg:gap-6 items-start">
+            <div class={`w-14 h-14 lg:w-16 lg:h-16 rounded-full ${reason.iconBg} flex items-center justify-center text-2xl lg:text-3xl shrink-0`}>
+              {reason.icon}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-2">{reason.title}</h3>
+              <p class="text-sm md:text-base text-text-body leading-relaxed">{reason.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How Does It Work Section -->
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading text-center mb-4 lg:mb-6">
+        ¿Cómo funciona?
+      </h2>
+
+      <p class="text-center text-text-body text-base md:text-lg mb-10 lg:mb-14">Simple y transparente</p>
+
+      <div class="space-y-6 lg:space-y-8 max-w-3xl mx-auto">
+        {steps.map((step) => (
+          <div class="flex gap-4 lg:gap-6 items-start">
+            <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-blue-primary text-white flex items-center justify-center font-bold text-lg lg:text-xl shrink-0">
+              {step.number}
+            </div>
+            <div class="flex-1 pt-1">
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-2">{step.title}</h3>
+              <p class="text-sm md:text-base text-text-body leading-relaxed">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-primary py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto text-center">
+      
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-white mb-6 lg:mb-8">
+        Un seguro de vida no es solo para morir tranquilo
+      </h2>
+
+      <p class="text-white/90 text-base md:text-lg lg:text-xl mb-8 lg:mb-10 leading-relaxed max-w-2xl mx-auto">
+        Es para vivir con responsabilidad, sabiendo que tus seres queridos estarán protegidos 
+        sin importar lo que pase.
+      </p>
+
+      <div class="max-w-md mx-auto">
+        <a 
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full bg-whatsapp text-white font-semibold py-4 px-8 rounded-lg hover:bg-[#20BA5A] transition-colors text-lg"
+        >
+          Contactar por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-white py-12 px-6 md:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto">
+      
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-text-heading mb-10 lg:mb-12">
+        También te puede interesar
+      </h2>
+
+      <div class="space-y-4 max-w-3xl">
+        {relatedServices.map((service) => (
+          <a 
+            href={service.link}
+            class="flex items-center gap-4 lg:gap-6 p-5 lg:p-6 bg-gray-50 rounded-lg hover:bg-gray-100 hover:shadow-md transition-all group"
+          >
+            <div class="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-blue-light flex items-center justify-center text-3xl lg:text-4xl shrink-0">
+              {service.icon}
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-lg lg:text-xl text-text-heading mb-1">{service.title}</h3>
+              <p class="text-sm md:text-base text-text-body">{service.description}</p>
+            </div>
+            <svg class="w-6 h-6 text-gray-400 group-hover:text-blue-primary transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

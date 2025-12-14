@@ -16,5 +16,23 @@ const { title = "Mendoza Coco Seguros" } = Astro.props;
   </head>
   <body class="font-sans text-text-body">
     <slot />
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.location.hash) {
+          const element = document.querySelector(window.location.hash);
+          if (element) {
+            setTimeout(() => {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
